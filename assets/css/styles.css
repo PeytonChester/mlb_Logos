@@ -1,0 +1,683 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	height:100%;
+	width:100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom:16px;
+}
+
+/*=======================================================*/
+/*================== NAV STYLES =========================*/
+/*=======================================================*/
+
+nav {
+	position: fixed;
+	z-index: 99;
+	height:80px;
+	width:100%;
+	background-color: #04306B;
+	padding:20px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.navSide {
+	height:100%;
+	width:50%;
+	display: flex;
+	align-items: center;
+}
+
+.navSide:nth-child(1) {
+	justify-content: flex-start;
+}
+
+.navSide:nth-child(2) {
+	justify-content: flex-end;
+}
+
+.navSide a {
+	color: white;
+	font-family: "Helvetica", sans-serif;
+	text-decoration: none;
+	font-weight: lighter;
+	margin-left:20px;
+}
+
+.navSide i {
+	color: white;
+	margin-left:20px;
+}
+
+#container {
+	min-height: 100%;
+	width: 100%;
+	min-width:1010px;
+	box-sizing: content-box;
+	/*background-color: yellow;*/
+}
+
+/*=======================================================*/
+/*================== HOME STYLES ========================*/
+/*=======================================================*/
+
+#homeWrapper {
+	height:97%;
+	width:100%;
+	min-height:550px;
+	/*background-color: #0000FF;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contentWrapper {
+	height: 100%;
+	width:80%;
+	background-color: #ECECEC;
+	/*margin-bottom:-20px;*/
+}
+
+.contentWrapper:nth-child(1) {
+	height: calc(100% - 130px);
+	margin-top:130px;
+}
+
+.splashImage {
+	width:100%;
+	height:80%;
+	background-image: url("../images/redSoxWin.jpg");
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+.imageOverlay {
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(to right, rgba(4, 48, 107, .5), rgba(208, 10, 43, .5));
+	overflow: hidden;
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*align-items: flex-end;*/
+	/*justify-content: center;*/
+}
+
+.homeTeamLogoContainer {
+	height: calc(100% - 120px);
+	width:100%;
+	padding-top:20px;
+}
+
+.homeTeamLogo {
+	height:200px;
+	width:200px;
+	background-image: url("../images/boston.png");
+	background-size: contain;
+}
+
+.homeImageTitleContainer {
+	width:100%;
+	height:120px;
+	line-height:80px;
+	/*background-color: yellow;*/
+}
+
+.homeImageTitle {
+	color: #FFF;
+	font-family: "Helvetica", sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.subSection {
+	width:100%;
+	height:200px;
+	background-color: #D20B33;
+	/*margin-top:-20px;*/
+	z-index:99;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-family: "Helvetica", sans-serif;
+	margin-bottom:-130px;
+}
+
+/*=======================================================*/
+/*================== TEAMS STYLES =======================*/
+/*=======================================================*/
+
+#teamsWrapper {
+	min-height:100%;
+	width:100%;
+	/*background-color: #00CC00;*/
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;*/
+	align-items: center;
+	box-sizing: content-box;
+}
+
+.teamContentWrapper {
+	min-height:100% !important;
+}
+
+.searchDiv {
+	height: 150px;
+	width:100%;
+	display: flex;
+}
+
+/*=================================================*/
+/*================ select form styles =============*/
+/*=================================================*/
+
+.mySelect {
+	position: relative;
+	font-family: "Arial", sans-serif;
+}
+
+.mySelect select {
+	/*display: none; !*hide original SELECT element: *!*/
+	margin-left:20px;
+	width:120px;
+	outline:none;
+}
+
+.select-selected {
+	background-color: red;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 6px solid;
+	border-color: #fff;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+	color: #ffffff;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+	position: absolute;
+	background-color: DodgerBlue;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+	display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*============ end select form styles =============*/
+
+.searchSide {
+	height:100%;
+	width:50%;
+	font-family: "Helvetica", sans-serif;
+	font-size: 14px;
+}
+
+.searchSide:nth-child(1) {
+	/*background-color: #0000FF;*/
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+
+.filterSelector {
+	color: #9f9f9f;
+	margin-left: 15px;
+}
+
+.searchSide:nth-child(2) {
+	/*background-color: #00CC00;*/
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 50px;
+	box-sizing: border-box;
+}
+
+.searchBar {
+	height:30px;
+	background-color: white;
+	width:260px;
+	padding: 0 30px 0 30px;
+	display: flex;
+	line-height: 30px;
+	color: #9f9f9f;
+}
+
+.searchBar i {
+	margin-right: 10px;
+	margin-top:7px;
+}
+
+.teamsHolder {
+	/*min-height:100%;*/
+	min-height:calc(100% - 100px);
+	width:100%;
+	padding:0 50px 0 50px;
+	/*background-color: red;*/
+	/*box-sizing:border-box;*/
+	display: flex;
+	flex-direction: row;
+	/*justify-content: space-between;*/
+	align-content: flex-start;
+	flex-wrap: wrap;
+	/*border: 1px solid blue;*/
+}
+
+@media only screen and (max-width: 1599px) {
+	.teamsHolder {
+		width:1000px;
+	}
+}
+
+@media only screen and (max-width: 1225px) {
+	.teamsHolder {
+		width:700px;
+	}
+}
+
+.team {
+	cursor: pointer;
+	height: 270px;
+	width:200px;
+	background-color:white;
+	padding:30px 30px 0 30px;
+	box-sizing: content-box;
+	border: 1px solid red;
+	margin:0 15px 30px 15px;
+}
+
+.teamLogo {
+	min-height:200px;
+	width:200px;
+	background-color:white;
+}
+
+.teamLogo img {
+	width:auto;
+	height:200px;
+}
+
+.teamName {
+	height:30px;
+	font-size:22px;
+	margin:10px 0 0 0;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+}
+
+.teamLocation {
+	height:20px;
+	font-size:14px;
+	/*padding:0 0 0 20px;*/
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+}
+
+/*=======================================================*/
+/*================== TEAM DETAILS ======================*/
+/*=======================================================*/
+
+.teamDetailsWrapper {
+	min-height:100%;
+	width:100%;
+	background-color: white;
+	z-index: 50;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding:150px 50px 50px 50px;
+	box-sizing: border-box;
+}
+
+/*======================================*/
+/*================= LEFT ===============*/
+/*======================================*/
+
+.teamDetailsLeft {
+	width:30vw;
+	min-width:360px;
+	min-height: 90vh;
+	background-color:#ECECEC;
+	margin-right:30px;
+	box-sizing: border-box;
+	/*padding: 30px;*/
+}
+
+/*======= primary =======*/
+
+.primaryLogos {
+	min-height: 100%;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.primaryLogoBanner {
+	height:40px;
+	width:100%;
+	background-color: #D20B33;
+	color:white;
+	text-align: center;
+	font-size:20px;
+	line-height: 40px;
+}
+
+.primaryLogos .logo {
+	width:50%;
+	padding-bottom: 30px;
+	/*margin: 20px;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.primaryLogos .logo:nth-child(2) {
+	width: 100%;
+}
+
+.primaryLogos .logo:nth-child(2) .primaryLogo {
+	height:300px;
+	width:300px;
+}
+
+.primaryLogo {
+	height:120px;
+	width:120px;
+	margin:10px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logoDate {
+	/*height: 40px;*/
+}
+
+/*======= alternate =======*/
+
+.alternateLogos {
+	min-height: 100%;
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.alternateLogoBanner {
+	height:40px;
+	width:100%;
+	background-color: #D20B33;
+	color:white;
+	text-align: center;
+	font-size:20px;
+	line-height: 40px;
+}
+
+.alternateLogos .logo {
+	width:50%;
+	padding-bottom: 30px;
+	/*margin: 20px;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.alternateLogo {
+	height:120px;
+	width:120px;
+	margin:10px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/*=======================================*/
+/*================= RIGHT ===============*/
+/*=======================================*/
+
+.teamDetailsRight {
+	width:60vw;
+	min-height: 90vh;
+	/*background-color:#ECECEC;*/
+}
+
+.teamDetailsNameBanner {
+	width:100%;
+	height:100px;
+	background-color:#D20B33;
+	display: flex;
+	justify-content: space-between;
+	/*align-items: center;*/
+	line-height: 100px;
+}
+
+.nameBannerLeft {
+	color:white;
+	font-size:32px;
+	letter-spacing: 1px;
+	display: flex;
+	padding-left:20px;
+}
+
+.nameBannerLeft i {
+	padding-top: 33px;
+}
+
+.detailsTeamName {
+	padding-left:20px;
+}
+
+.nameBannerRight {
+	float: right;
+
+}
+
+.detailsTeamLocation {
+	color:white;
+	font-size: 18px;
+	margin-right:20px;
+}
+
+/*========================================*/
+/*========= League and Facilities ========*/
+/*========================================*/
+
+.leagueAndFacilities {
+	display: flex;
+	justify-content: space-between;
+	min-height:100%;
+}
+
+/*=============== League ===============*/
+
+
+.league {
+	width:49%;
+	min-height:100%;
+	background-color:#ECECEC;
+}
+
+.leagueBanner {
+	min-height:50px;
+	width:100%;
+	background-color: #04306B;
+	color:white;
+	text-align: center;
+	font-size:18px;
+	line-height: 50px;
+}
+
+.leagueLogo {
+	height:200px;
+	width:200px;
+	/*margin:20px;*/
+	background-size: contain;
+	background-position: center;
+	margin:20px auto;
+}
+
+/*=============== Facilities ===============*/
+
+.facilities {
+	width:49%;
+	min-width:300px;
+	min-height:100%;
+	background-color: #ECECEC;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*justify-content: space-around;*/
+}
+
+.facilityBanner {
+	min-height:50px;
+	width:100%;
+	background-color: #04306B;
+	color:white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 20px;
+	/*margin-bottom: 30px;*/
+}
+
+.currentFacility {
+	min-height:100%;
+	display: none;
+
+}
+
+.pastFacility {
+	min-height:100%;
+	/*display: none;*/
+}
+
+.facility {
+	margin:30px;
+}
+
+.facilityImage {
+	margin: 0 auto;
+	width:300px;
+	height:200px;
+	background-position: center;
+	background-size:cover;
+}
+
+.figureDiv {
+	height:auto;
+	padding: 0;
+	background-color:#ECECEC;
+}
+
+.playerBanner {
+	width:100%;
+	height:65px;
+	background-color:#D20B33;
+	text-align: center;
+	line-height: 65px;
+	color:white;
+	font-size:24px;
+	font-weight:bold;
+}
+
+/*================= FIGURES ===============*/
+
+.figure {
+	display: flex;
+	padding:30px;
+}
+
+.figureBanner {
+	width:100%;
+	height:40px;
+	background-color: #04306B;
+	color:white;
+	text-align: center;
+	line-height:40px;
+	font-size: 20px;
+}
+
+.figurePicture {
+	min-height:200px;
+	min-width:125px;
+	background-size: cover;
+	background-position: center;
+	margin-right:20px;
+}
+
+.playerName {
+	font-size:20px;
+	font-weight:bold;
+}
+
+.playerTeamHistory {
+	font-weight:bold;
+}
+
+.coachName {
+	font-size:20px;
+	font-weight:bold;
+}
+
+.coachYearsCoached {
+	font-weight:bold;
+}
+
+
+/*=======================================================*/
+/*================== FOOTER STYLES ======================*/
+/*=======================================================*/
+
+#footer {
+	height:80px;
+	width:100%;
+	background-color: #04306B;
+}
